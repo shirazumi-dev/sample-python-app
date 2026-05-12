@@ -1,5 +1,5 @@
 import pytest
-from converter import celsius_to_fahrenheit, fahrenheit_to_celsius, celsius_to_kelvin, kelvin_to_celsius
+from converter import celsius_to_fahrenheit, fahrenheit_to_celsius, celsius_to_kelvin, kelvin_to_celsius, fahrenheit_to_kelvin, kelvin_to_fahrenheit
 
 
 def test_celsius_to_fahrenheit():
@@ -22,3 +22,13 @@ def test_celsius_to_kelvin():
 def test_kelvin_to_celsius():
     assert kelvin_to_celsius(273.15) == 0
     assert kelvin_to_celsius(373.15) == 100
+
+
+def test_fahrenheit_to_kelvin():
+    assert fahrenheit_to_kelvin(32) == pytest.approx(273.15)
+    assert fahrenheit_to_kelvin(212) == pytest.approx(373.15)
+
+
+def test_kelvin_to_fahrenheit():
+    assert kelvin_to_fahrenheit(273.15) == pytest.approx(32)
+    assert kelvin_to_fahrenheit(373.15) == pytest.approx(212)

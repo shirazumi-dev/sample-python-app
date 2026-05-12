@@ -14,6 +14,14 @@ def kelvin_to_celsius(k: float) -> float:
     return k - 273.15
 
 
+def fahrenheit_to_kelvin(f: float) -> float:
+    return celsius_to_kelvin(fahrenheit_to_celsius(f))
+
+
+def kelvin_to_fahrenheit(k: float) -> float:
+    return celsius_to_fahrenheit(kelvin_to_celsius(k))
+
+
 if __name__ == "__main__":
     print("=== Temperature Converter ===")
     try:
